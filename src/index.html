@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Git - Card</title>
+</head>
+<body>
+    <div class="modal">
+        <img id="profile-pic" alt="">
+        <div class="close"></div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="hamburger-menu">
+                    <div class="center"></div>
+                </div>
+                <a href="mailto: s4shahzaib73@gmail.com" class="mail">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <div class="main">
+                    <div class="image">
+                        <div class="hover">
+                            <i class="fas fa-camera fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="name" id="profileName"></h3>
+                    <h3 class="sub-name" id="login"></h3>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <div class="about-container">
+                        <h3 class="title"> About Me! </h3>
+                        <p id="about" class="text"></p>
+                    </div>
+                    <div class="icons-container">
+                       
+                        <a href="https://www.linkedin.com/in/shahzaib-fardeen/" target="_blank" class="icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/Shahzaibfardeen" target="_blank" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <a href="https://twitter.com/shahzaibfardeen" target="_blank" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/shahzaib_fardeen/" target="_blank" class="icon">
+                            <i class="fab fa-instagram"></i>    
+                        </a>                      
+                        
+                        <a href="https://www.facebook.com/shahzaib.fardeen/" target="_blank" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        
+                        <a href="https://hashnode.com/@Shahzaibfardeen" target="_blank" class="icon">
+                            <i class="fa fa-rss-square" aria-hidden="true"></i>
+                        </a>
+                        
+                        <a href="https://www.polywork.com/shahzaibfardeen" target="_blank" class="icon">
+                            <i class="fa fa-braille"></i>
+                        </a>
+                        
+                    </div>
+                    <div class="buttons-wrap">
+                        <div class="follow-wrap">
+                            <a href="" target="_blank" class="follow" id="btnFollow"> Follow </a>
+                        </div>
+                        <div class="share-wrap">
+                            <a href="https://github.com/Shahzaibfardeen/My_Profile_Card" target="_blank" class="share">Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div>
+                        <h3 id="Repo" class="number"></h3>
+                        <h3 class="number-title"> Repositories </h3>
+                    </div>
+                    <div>
+                        <h3 id="Following" class="number"></h3>
+                        <h3 class="number-title"> Following </h3>
+                    </div>
+                    <div>
+                        <h3 id="Followers" class="number"></h3>
+                        <h3 class="number-title"> Followers </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
