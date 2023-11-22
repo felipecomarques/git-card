@@ -1,5 +1,7 @@
-const getGitInfo = (username) => {
-    const url = 'https://api.github.com/users/felipecomarques';
+const getGitInfo = () => {
+    const username = document.getElementById("usernameInput").value;
+    const url = `https://api.github.com/users/${username}`;
+    document.querySelector(".container").style.display = 'flex';
     const ajax = new XMLHttpRequest();
     ajax.open('GET', url);
 
@@ -8,9 +10,11 @@ const getGitInfo = (username) => {
             if (ajax.status == 200) {
                 const info = JSON.parse(ajax.responseText);
 
-                const profilePic = document.getElementById("profile-pic");
+                const email = document.querySelector(".mail");
+                email.href = `mailto:${info.email}`;
+
+                const profilePic = document.querySelector(".image");
                 profilePic.style.backgroundImage = `url(${info.avatar_url})`;
-                console.log(info.avatar_url)
 
                 const profileName = document.getElementById("profileName");
                 profileName.innerHTML = info.name
@@ -24,6 +28,9 @@ const getGitInfo = (username) => {
                 const about = document.getElementById("about");
                 about.innerHTML = info.bio;
 
+                const git = document.getElementById("link-git");
+                git.href = info.html_url;
+
                 const repo = document.getElementById("Repo");
                 repo.innerHTML = info.public_repos;
 
@@ -32,6 +39,7 @@ const getGitInfo = (username) => {
 
                 const following = document.getElementById("Following");
                 following.innerHTML = info.following;
+                
             } else {
                 alert('Erro na requisição');
             }
@@ -40,11 +48,3 @@ const getGitInfo = (username) => {
     
     ajax.send();
 }
-
-// Descomente as linhas abaixo se quiser acionar a função ao clicar em um botão
-// const btnPesquisar = document.querySelector('#pesquisar-perfil');
-// btnPesquisar.addEventListener("click", getGitInfo);
-
-document.addEventListener('DOMContentLoaded', function() {
-    getGitInfo();
-});
